@@ -10,7 +10,7 @@
     "@angular/platform-browser": "8.2.14",
     "@angular/platform-browser-dynamic": "8.2.14",
     "@angular/router": "8.2.14",
-    "angular-fragment-matcher": "^1.0.2",
+    "angular-fragment-matcher": "^1.2.0",
     "core-js": "2.6.11",
     "rxjs": "6.5.4",
     "zone.js": "0.9.1"

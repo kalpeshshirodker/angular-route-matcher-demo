@@ -7,12 +7,7 @@ import { StateComponent } from "./state.component";
 import { StatesComponent } from "./states.component";
 import { ExportStatesComponent } from "./exportstates.component";
 
-import { RouteMatchService } from 'angular-fragment-matcher';
-
-
-export function getRouteMatchService(router: Router): RouteMatchService {
-  return new RouteMatchService(router);
-}
+import { RouteMatchService, RouteMatchModule } from 'angular-fragment-matcher';
 
 const routes: Routes = [
   {
@@ -53,13 +48,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [ BrowserModule, RouterModule.forChild(routes) ],
+  imports: [ BrowserModule, RouterModule.forChild(routes) , RouteMatchModule],
   declarations: [ StateComponent, StatesComponent, ExportStatesComponent ],
-  providers: [ {
-    provide: RouteMatchService,
-    useFactory : getRouteMatchService, 
-    deps : [ Router ]
-    } ],
+  providers: [ ],
   exports: [ RouterModule ]
 })
 export class StatesModule {
